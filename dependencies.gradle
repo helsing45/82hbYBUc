@@ -6,8 +6,7 @@ ext {
     koin_version = '2.2.1'
     mapstruct_version = '1.4.1.Final'
     retrofit_version = "2.9.0"
-    rxjava_version = "2.2.3"
-    rxkotlin_version = "2.3.0"
     lifecycle_version = "2.2.0"
     arch_version = "2.1.0"
+    mockito_version="2.7.22"
 }
