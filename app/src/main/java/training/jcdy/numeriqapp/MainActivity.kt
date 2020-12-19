@@ -1,21 +1,20 @@
 package training.jcdy.numeriqapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 import training.jcdy.numeriqapp.data.articles.model.Article
 import training.jcdy.numeriqapp.databinding.ActivityMainBinding
-import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var _viewBinding: ActivityMainBinding
+    private val _viewModel: MainViewModel by viewModel();
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(_viewBinding.root)
-        val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        viewModel.getArticles().observe(this, this::onArticlesReceived)
+        _viewModel.getArticles().observe(this, this::onArticlesReceived)
     }
 
     private fun onArticlesReceived(articles: List<Article>?) {

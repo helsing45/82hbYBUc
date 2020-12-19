@@ -6,7 +6,7 @@ import retrofit2.http.Query
 import training.jcdy.numeriqapp.data.articles.dto.NewsSearchResponseDTO
 
 interface ArticleAPI {
-    
+
     @GET("everything")
     fun getArticles(
         @Query("q") q: String?,

@@ -1,7 +1,6 @@
 package training.jcdy.numeriqapp.data.articles.mapper
 
 import org.mapstruct.Mapper
-import org.mapstruct.factory.Mappers
 import training.jcdy.numeriqapp.data.articles.dto.ArticleDTO
 import training.jcdy.numeriqapp.data.articles.dto.NewsSearchResponseDTO
 import training.jcdy.numeriqapp.data.articles.dto.SourceDTO
