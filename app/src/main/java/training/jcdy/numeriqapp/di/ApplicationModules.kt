@@ -10,7 +10,9 @@ import training.jcdy.numeriqapp.MainViewModel
 import training.jcdy.numeriqapp.data.articles.ArticleRepository
 import training.jcdy.numeriqapp.data.articles.ArticleRepositoryImpl
 import training.jcdy.numeriqapp.data.articles.mapper.ArticleMapper
-import training.jcdy.numeriqapp.data.articles.retrofit.ArticleAPI
+import training.jcdy.numeriqapp.data.articles.retrofit.ApiKeyProvider
+import training.jcdy.numeriqapp.data.articles.retrofit.ArticleWebService
+import training.jcdy.numeriqapp.data.articles.retrofit.DebugApiKeyProvider
 
 val applicationModule by lazy {
     arrayOf(
@@ -26,11 +28,12 @@ private val mapperModules = module {
 }
 
 private val repositoryModules = module {
-    factory<ArticleRepository> { ArticleRepositoryImpl(get(), get()) }
+    factory<ApiKeyProvider> { DebugApiKeyProvider() }
+    factory<ArticleRepository> { ArticleRepositoryImpl(get(), get(), get()) }
 }
 
 private val webServiceModules = module {
-    single { createWebService<ArticleAPI>(get()) }
+    single { createWebService<ArticleWebService>(get()) }
     single { createRetrofit(get()) }
     single { createHttpClient() }
 }

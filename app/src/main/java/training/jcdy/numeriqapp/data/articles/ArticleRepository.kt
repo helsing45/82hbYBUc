@@ -7,7 +7,8 @@ import retrofit2.Response
 import training.jcdy.numeriqapp.data.articles.dto.NewsSearchResponseDTO
 import training.jcdy.numeriqapp.data.articles.mapper.ArticleMapper
 import training.jcdy.numeriqapp.data.articles.model.Article
-import training.jcdy.numeriqapp.data.articles.retrofit.ArticleAPI
+import training.jcdy.numeriqapp.data.articles.retrofit.ApiKeyProvider
+import training.jcdy.numeriqapp.data.articles.retrofit.ArticleWebService
 
 interface ArticleRepository{
     fun fetchArticles(): MutableLiveData<List<Article>>
@@ -15,7 +16,8 @@ interface ArticleRepository{
 
 class ArticleRepositoryImpl(
     private var _mapper:ArticleMapper,
-    private var _webService:ArticleAPI
+    private var _webService:ArticleWebService,
+    private var _apiKeyProvider:ApiKeyProvider
 ) : ArticleRepository{
     val articles = MutableLiveData<List<Article>>()
 
@@ -24,7 +26,7 @@ class ArticleRepositoryImpl(
             "bitcoin",
             "2020-11-19",
             "publishedAt",
-            "25a2abdea2624a55b01944d73fa9dc52"
+            _apiKeyProvider.getApiKey()
         )
         call.enqueue(object : Callback<NewsSearchResponseDTO> {
             override fun onResponse(

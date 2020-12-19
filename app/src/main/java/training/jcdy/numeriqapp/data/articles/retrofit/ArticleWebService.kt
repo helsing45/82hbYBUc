@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import training.jcdy.numeriqapp.data.articles.dto.NewsSearchResponseDTO
 
-interface ArticleAPI {
+interface ArticleWebService {
 
     @GET("everything")
     fun getArticles(

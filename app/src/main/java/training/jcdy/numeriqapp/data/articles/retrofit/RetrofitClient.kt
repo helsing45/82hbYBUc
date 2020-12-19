@@ -18,9 +18,9 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create())
     }
 
-    val apiInterface: ArticleAPI by lazy {
+    val WEB_SERVICE_INTERFACE: ArticleWebService by lazy {
         retrofitClient
             .build()
-            .create(ArticleAPI::class.java)
+            .create(ArticleWebService::class.java)
     }
 }
