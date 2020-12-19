@@ -3,7 +3,7 @@ package training.jcdy.numeriqapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import training.jcdy.data.articles.model.Article
+import training.jcdy.numeriqapp.data.articles.model.Article
 import training.jcdy.numeriqapp.databinding.ActivityMainBinding
 import java.lang.StringBuilder
 

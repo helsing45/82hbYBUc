@@ -3,7 +3,7 @@ ext {
     core_ktx = "1.3.2"
     appcompat = "1.2.0"
     constraintlayout = "2.0.4"
-    koin_version = '2.2.1'
+    koin_version = '2.2.0'
     mapstruct_version = '1.4.1.Final'
     retrofit_version = "2.9.0"
     rxjava_version = "2.2.3"

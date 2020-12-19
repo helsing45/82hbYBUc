@@ -1,4 +1,4 @@
-package training.jcdy.data.articles.retrofit
+package training.jcdy.numeriqapp.data.articles.retrofit
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

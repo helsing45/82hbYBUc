@@ -1,4 +1,4 @@
-package training.jcdy.data.articles
+package training.jcdy.numeriqapp.data.articles
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,11 +7,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.HttpException
 import retrofit2.Response
-import training.jcdy.data.articles.dto.NewsSearchResponseDTO
-import training.jcdy.data.articles.mapper.ArticleMapper
-import training.jcdy.data.articles.model.Article
-import training.jcdy.data.articles.retrofit.ArticleAPI
-import training.jcdy.data.articles.retrofit.RetrofitClient
+import training.jcdy.numeriqapp.data.articles.dto.NewsSearchResponseDTO
+import training.jcdy.numeriqapp.data.articles.mapper.ArticleMapper
+import training.jcdy.numeriqapp.data.articles.model.Article
+import training.jcdy.numeriqapp.data.articles.retrofit.ArticleAPI
+import training.jcdy.numeriqapp.data.articles.retrofit.RetrofitClient
 
 
 object ArticleRepository {

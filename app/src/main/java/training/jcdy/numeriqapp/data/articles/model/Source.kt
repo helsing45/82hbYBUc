@@ -1,4 +1,4 @@
-package training.jcdy.data.articles.model
+package training.jcdy.numeriqapp.data.articles.model
 
 
 data class Source(

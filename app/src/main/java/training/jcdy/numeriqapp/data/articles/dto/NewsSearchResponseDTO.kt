@@ -1,4 +1,4 @@
-package training.jcdy.data.articles.dto
+package training.jcdy.numeriqapp.data.articles.dto
 
 data class NewsSearchResponseDTO(
     var status: String? = null,
